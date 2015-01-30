@@ -4,12 +4,6 @@ require 'dotenv'
 require 'safe_yaml'
 require 'colorator'
 require 'mkmf'
-require_relative 'jekyll_auth/version'
-require_relative 'jekyll_auth/helpers'
-require_relative 'jekyll_auth/auth_site'
-require_relative 'jekyll_auth/jekyll_site'
-require_relative 'jekyll_auth/config_error'
-require_relative 'jekyll_auth/commands'
 
 Dotenv.load
 
@@ -43,3 +37,10 @@ class JekyllAuth
     !!JekyllAuth::config["ssl"]
   end
 end
+
+require_relative 'jekyll_auth/version'
+require_relative 'jekyll_auth/helpers'
+require_relative 'jekyll_auth/auth_site'
+require_relative 'jekyll_auth/jekyll_site'
+require_relative 'jekyll_auth/config_error'
+require_relative 'jekyll_auth/commands'
